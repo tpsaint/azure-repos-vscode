@@ -11,7 +11,7 @@ export class SettingsMock implements ISettings {
     /* tslint:disable:variable-name */
     constructor(public AppInsightsEnabled: boolean, public AppInsightsKey: string, public LoggingLevel: string,
                 public PollingInterval: number, public RemoteUrl: string, public TeamProject: string, public BuildDefinitionId: number,
-                public ShowWelcomeMessage: boolean) {
+                public ShowWelcomeMessage: boolean, public ShowFarewellMessage: boolean) {
         //nothing to do
     }
     /* tslint:enable:variable-name */
