@@ -8,7 +8,7 @@
 export class Constants {
     static ExtensionName: string = "team";
     static ExtensionUserAgentName: string = "AzureReposVSCode";
-    static ExtensionVersion: string = "1.161.0";
+    static ExtensionVersion: string = "1.161.1";
     static OAuth: string = "OAuth";
     static TokenLearnMoreUrl: string = "https://aka.ms/gtgzt4";
     static TokenShowMeUrl: string = "https://aka.ms/o2wkmo";

@@ -1,5 +1,11 @@
 
 
+## [v1.161.1](https://github.com/microsoft/azure-repos-vscode/tree/v1.161.1) (2020-09-04)
+
+The Azure Repos VS Code extension has been sunsetted.
+Learn more at in our [deprecation notice](https://aka.ms/AA9k2vv).
+This version of the extension contains no functional changes other than a message box directing you to that notice.
+
 ## [v1.161.0](https://github.com/microsoft/azure-repos-vscode/tree/v1.161.0) (2019-11-06)
 
 [Full Changelog](https://github.com/microsoft/azure-repos-vscode/compare/v1.149.2...v1.161.0)
