@@ -27,6 +27,8 @@ v5.9.0
 [sudo] npm install npm -g
 ```
 
+**Note2**: Our CI service uses Node 11. Node 14 appears to be incompatible. Your mileage may vary.
+
 ### Gulp
 Install gulp
 ```bash
