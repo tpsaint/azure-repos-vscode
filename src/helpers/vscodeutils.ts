@@ -5,7 +5,7 @@
 "use strict";
 
 import { commands, MessageItem, QuickPickItem, Range, window } from "vscode";
-import { Constants, MessageTypes } from "./constants";
+import { MessageTypes } from "./constants";
 import { IButtonMessageItem } from "./vscodeutils.interfaces";
 import { Utils } from "./utils";
 import { Telemetry } from "../services/telemetry";
@@ -65,7 +65,7 @@ export class VsCodeUtils {
     private static async showMessage(message: string, type: MessageTypes, ...urlMessageItem: IButtonMessageItem[]): Promise<IButtonMessageItem> {
         //The following "cast" allows us to pass our own type around (and not reference "vscode" via an import)
         const messageItems: ButtonMessageItem[] = <ButtonMessageItem[]>urlMessageItem;
-        const messageToDisplay: string = `(${Constants.ExtensionName}) ${Utils.FormatMessage(message)}`;
+        const messageToDisplay: string = `${Utils.FormatMessage(message)}`;
 
         //Use the typescript spread operator to pass the rest parameter to showErrorMessage
         let chosenItem: IButtonMessageItem;

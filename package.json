@@ -2,7 +2,7 @@
   "name": "team",
   "displayName": "Azure Repos",
   "description": "Connect to Azure Repos and work with Git and Team Foundation Version Control (TFVC) repositories. Manage your pull requests, work items, and more.",
-  "version": "1.161.0",
+  "version": "1.161.1",
   "publisher": "ms-vsts",
   "icon": "assets/team.png",
   "markdown": "standard",
@@ -229,7 +229,7 @@
     },
     "configuration": {
       "type": "object",
-      "title": "Azure Repos extension options",
+      "title": "Azure Repos",
       "properties": {
         "team.appInsights.enabled": {
           "type": "boolean",
@@ -276,6 +276,11 @@
           "type": "boolean",
           "default": true,
           "description": "Tracks whether the extension should display the Welcome message after the initial installation."
+        },
+        "team.showFarewellMessage": {
+          "type": "boolean",
+          "default": true,
+          "description": "Show the deprecation message again?"
         },
         "tfvc.location": {
           "type": "string",

@@ -8,11 +8,12 @@
 export class Constants {
     static ExtensionName: string = "team";
     static ExtensionUserAgentName: string = "AzureReposVSCode";
-    static ExtensionVersion: string = "1.161.0";
+    static ExtensionVersion: string = "1.161.1";
     static OAuth: string = "OAuth";
-    static TokenLearnMoreUrl: string = "https://aka.ms/v9r4jt";
+    static TokenLearnMoreUrl: string = "https://aka.ms/gtgzt4";
     static TokenShowMeUrl: string = "https://aka.ms/o2wkmo";
     static ReadmeLearnMoreUrl: string = "https://aka.ms/jkapah";
+    static FarewellLearnMoreUrl: string = "https://aka.ms/AA9k2vv";
     static TfvcLearnMoreUrl: string = "https://github.com/Microsoft/azure-repos-vscode/blob/master/TFVC_README.md#quick-start";
     static ServerWorkspaceUrl: string = "https://github.com/Microsoft/azure-repos-vscode/blob/master/TFVC_README.md#what-is-the-difference-between-a-local-and-server-workspace-how-can-i-tell-which-one-im-working-with";
     static VS2015U3CSRUrl: string = "https://msdn.microsoft.com/en-us/library/mt752379.aspx";
@@ -84,6 +85,7 @@ export class SettingNames {
     static TeamProject: string = SettingNames.SettingsPrefix + "teamProject";
     static BuildDefinitionId: string = SettingNames.SettingsPrefix + "buildDefinitionId";
     static ShowWelcomeMessage: string = SettingNames.SettingsPrefix + "showWelcomeMessage";
+    static ShowFarewellMessage: string = SettingNames.SettingsPrefix + "showFarewellMessage";
 }
 
 export class TelemetryEvents {
@@ -93,6 +95,7 @@ export class TelemetryEvents {
     static DeviceFlowFailed: string = TelemetryEvents.TelemetryPrefix + "deviceflowfailed";
     static DeviceFlowPat: string = TelemetryEvents.TelemetryPrefix + "deviceflowpat";
     static ExternalRepository: string = TelemetryEvents.TelemetryPrefix + "externalrepo";
+    static FarewellLearnMoreClick: string = TelemetryEvents.TelemetryPrefix + "farewelllearnmoreclick";
     static Installed: string = TelemetryEvents.TelemetryPrefix + "installed";
     static ManualPat: string = TelemetryEvents.TelemetryPrefix + "manualpat";
     static OpenAdditionalQueryResults: string = TelemetryEvents.TelemetryPrefix + "openaddlqueryresults";

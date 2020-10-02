@@ -79,6 +79,7 @@ export interface ISettings {
     TeamProject: string;
     BuildDefinitionId: number;
     ShowWelcomeMessage: boolean;
+    ShowFarewellMessage: boolean;
 }
 
 export class Settings extends BaseSettings implements ISettings {
@@ -90,6 +91,7 @@ export class Settings extends BaseSettings implements ISettings {
     private _teamProject: string;
     private _buildDefinitionId: number;
     private _showWelcomeMessage: boolean;
+    private _showFarewellMessage: boolean;
 
     constructor() {
         super();
@@ -112,6 +114,7 @@ export class Settings extends BaseSettings implements ISettings {
         this._teamProject = this.readSetting<string>(SettingNames.TeamProject, undefined);
         this._buildDefinitionId = this.readSetting<number>(SettingNames.BuildDefinitionId, 0);
         this._showWelcomeMessage = this.readSetting<boolean>(SettingNames.ShowWelcomeMessage, true);
+        this._showFarewellMessage = this.readSetting<boolean>(SettingNames.ShowFarewellMessage, true);
     }
 
     public get AppInsightsEnabled(): boolean {
@@ -147,5 +150,12 @@ export class Settings extends BaseSettings implements ISettings {
     }
     public set ShowWelcomeMessage(value: boolean) {
         this.writeSetting(SettingNames.ShowWelcomeMessage, value, true /*global*/);
+    }
+
+    public get ShowFarewellMessage(): boolean {
+        return this._showFarewellMessage;
+    }
+    public set ShowFarewellMessage(value: boolean) {
+        this.writeSetting(SettingNames.ShowFarewellMessage, value, true /*global*/);
     }
 }

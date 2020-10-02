@@ -1,5 +1,10 @@
 # Azure Repos Extension for Visual Studio Code
-![Build Status](https://mseng.visualstudio.com/_apis/public/build/definitions/b924d696-3eae-4116-8443-9a18392d8544/3167/badge?branch=master)
+
+**DEPRECATION NOTICE**:
+This extension is no longer receiving updates.
+[Learn more here](https://aka.ms/AA9k2vv).
+
+---
 
 This extension allows you to connect to Azure DevOps Services and Team Foundation Server and provides support for [Team Foundation Version Control (TFVC)](TFVC_README.md#quick-start). 
 It allows you to monitor your builds and manage your pull requests and work items for your TFVC or Git source repositories. The extension uses your local repository information 

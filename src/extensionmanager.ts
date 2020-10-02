@@ -244,6 +244,7 @@ export class ExtensionManager implements Disposable {
         this._settings = new Settings(); //We need settings before showing the Welcome message
         Telemetry.Initialize(this._settings); //Need to initialize telemetry for showing welcome message
         if (!reinitializing) {
+            await this.showFarewellMessage();
             await this.showWelcomeMessage(); //Ensure we show the message before hooking workspace.onDidChangeConfiguration
         }
 
@@ -442,7 +443,7 @@ export class ExtensionManager implements Disposable {
     //Ensure this is async (and is awaited on) so that the extension doesn't continue until user deals with message
     private async showWelcomeMessage(): Promise<void> {
         if (this._settings.ShowWelcomeMessage) {
-            const welcomeMessage: string = `Welcome to version ${Constants.ExtensionVersion} of the Azure Repos extension!`;
+            const welcomeMessage: string = `This is version ${Constants.ExtensionVersion} of the Azure Repos extension.`;
             const messageItems: IButtonMessageItem[] = [];
             messageItems.push({ title : Strings.LearnMore,
                                 url : Constants.ReadmeLearnMoreUrl,
@@ -454,6 +455,21 @@ export class ExtensionManager implements Disposable {
             const chosenItem: IButtonMessageItem = await VsCodeUtils.ShowInfoMessage(welcomeMessage, ...messageItems);
             if (chosenItem && chosenItem.title === Strings.DontShowAgain) {
                 this._settings.ShowWelcomeMessage = false;
+            }
+        }
+    }
+
+    private async showFarewellMessage(): Promise<void> {
+        if (this._settings.ShowFarewellMessage) {
+            const farewellMessage: string = `The Azure Repos extension has been sunsetted.`;
+            const messageItems: IButtonMessageItem[] = [];
+            messageItems.push({ title : Strings.LearnMore,
+                                url : Constants.FarewellLearnMoreUrl,
+                                telemetryId : TelemetryEvents.FarewellLearnMoreClick });
+            messageItems.push({ title : Strings.DontShowAgain });
+            const chosenItem: IButtonMessageItem = await VsCodeUtils.ShowInfoMessage(farewellMessage, ...messageItems);
+            if (chosenItem && chosenItem.title === Strings.DontShowAgain) {
+                this._settings.ShowFarewellMessage = false;
             }
         }
     }
